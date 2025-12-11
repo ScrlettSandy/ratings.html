@@ -15,7 +15,7 @@
       font-family: "Inter", sans-serif;
       color: #2b1f15;
     }
-
+    
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -31,23 +31,26 @@
     .top-bar ul {
       list-style: none;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       align-items: center;
     }
 
     .top-bar li {
       font-size: 13px;
-      cursor: pointer;
-      transition: opacity 0.3s ease;
       text-align: center;
     }
 
     .top-bar li:first-child { text-align: left; }
     .top-bar li:last-child { text-align: right; }
 
-    .top-bar li:hover { opacity: 0.6; }
+    .top-bar a {
+      text-decoration: none;
+      color: #2b1f15;
+      transition: opacity 0.3s ease;
+    }
 
-    /* ================= HEADER ================= */
+    .top-bar a:hover { opacity: 0.6; }
+   
     .page-header {
       padding: 70px 40px 40px;
       text-align: center;
@@ -132,6 +135,7 @@
       opacity: 0.5;
       margin-top: 2px;
     }
+
     .pagination {
       margin-top: 25px;
       text-align: center;
@@ -189,6 +193,7 @@
       transform: translateY(-8px);
       box-shadow: 0 18px 28px rgba(0,0,0,0.55);
     }
+
     footer {
       background-color: #2b1f15;
       color: #efe4d3;
@@ -209,20 +214,19 @@
 
 <div class="top-bar">
   <ul>
-    <li>SEARCH</li>
+    <li><a href="https://scrlettsandy.github.io/index.html/">HOME</a></li>
+    <li><a href="https://scrlettsandy.github.io/search.html/">SEARCH</a></li>
     <li>TOP RATINGS</li>
-    <li>PROFILE</li>
+    <li><a href="https://scrlettsandy.github.io/profile.html/">PROFILE</a></li>
   </ul>
 </div>
 
 <div class="container">
-
   <div class="page-header">
     <h1>TOP RATINGS</h1>
   </div>
 
   <div class="ratings-card">
-
     <div class="rating-row">
       <div class="rating-poster">
         <img src="anora.jpg" alt="Anora movie poster">
@@ -281,9 +285,7 @@
       <span>1–3 of 100</span>
       <span>→ NEXT</span>
     </div>
-
   </div>
-
 </div>
 
 <div class="film-strip"></div>
